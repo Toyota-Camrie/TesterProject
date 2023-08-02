@@ -1,21 +1,23 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, ScrollView } from 'react-native';
 
-import SplashImage from './styles/SplashImage';
+import SplashImage from './components/SplashImage';
 
 const LogoImage = require('./images/logo.png');
 
 export default function App() {
   return (
-    <View style = {styles.container}>
-      <View style = {styles.imageContainer}>
-        <SplashImage placeholderImageSource = { LogoImage } />
-      </View>
+    <ScrollView>
+      <View style = {styles.container}>
+        <View style = {styles.imageContainer}>
+          <SplashImage placeholderImageSource = { LogoImage } />
+        </View>
 
-      <View style = {styles.footerContainer}>
-        <View style = {styles.rectangle}></View>
+        <View style = {styles.footerContainer}>
+          <View style = {styles.rectangle}></View>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
